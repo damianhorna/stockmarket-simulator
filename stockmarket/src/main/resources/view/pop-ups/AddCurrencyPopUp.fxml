@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import org.controlsfx.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="415.0" style="-fx-background-color: #ffffff;" styleClass="modal-dialog-glass" stylesheets="@../../styles/modal-dialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.add.AddCurrencyPopUpController">
+   <children>
+      <JFXButton fx:id="addIco" buttonType="RAISED" layoutX="173.0" layoutY="352.0" onAction="#addCurrency" ripplerFill="#33ffff" style="-fx-background-color: #182942; -fx-background-radius: 30px;" text="ADD" textFill="#f8f1f1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="79.0" layoutY="49.0" prefHeight="172.0" prefWidth="258.0" stylesheets="@../../styles/modal-dialog.css">
+         <children>
+            <JFXTextField fx:id="name" labelFloat="true" promptText="Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <MenuButton fx:id="countries" mnemonicParsing="false" prefHeight="31.0" prefWidth="276.0" text="Countries">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </VBox>
+      <MaterialDesignIconView fx:id="closePopUpIco" glyphName="POWER" layoutX="377.0" layoutY="35.0" onMouseClicked="#closePopUp" size="24">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <StackPane fx:id="stackPane" layoutX="69.0" layoutY="205.0" prefHeight="56.0" prefWidth="258.0" />
+   </children>
+</Pane>

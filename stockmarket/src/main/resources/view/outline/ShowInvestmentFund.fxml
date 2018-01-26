@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="552.0" style="-fx-background-color: #ffffff;" styleClass="modal-dialog-glass" stylesheets="@../../styles/modal-dialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.outline.ShowInvestmentFundController">
+   <children>
+      <MaterialDesignIconView fx:id="closePopUpIco" glyphName="POWER" layoutX="512.0" layoutY="35.0" onMouseClicked="#closePopUp" size="24">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <Label fx:id="fundName" alignment="CENTER" layoutX="68.0" layoutY="314.0" prefHeight="35.0" prefWidth="402.0" text="Name of fund" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="247.0" fitWidth="777.0" layoutX="40.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/inFund.png" />
+         </image>
+         <effect>
+            <DropShadow offsetX="2.0" offsetY="2.0" spread="0.26" />
+         </effect></ImageView>
+      <VBox layoutX="84.0" layoutY="379.0" prefHeight="162.0" prefWidth="267.0">
+         <children>
+            <Label text="Name of CEO:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Surname of CEO:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Number of fund share:s">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Fund share value:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Budget:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="354.0" layoutY="379.0" prefHeight="162.0" prefWidth="101.0">
+         <children>
+            <Label fx:id="fundCEOName" text="name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="fundCEOSurname" text="surname">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="fundNumOfFundShares" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="fundSharesValue" text="0.00">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="fundBudget" prefHeight="21.0" prefWidth="119.0" text="0.00">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <StackPane fx:id="stackPane" layoutX="133.0" layoutY="344.0" prefHeight="10.0" prefWidth="301.0" />
+      <HBox layoutX="70.0" layoutY="349.0" prefHeight="10.0" prefWidth="392.0">
+         <children>
+            <Line endX="100.0" startX="-100.0" />
+            <Line endX="100.0" startX="-100.0" />
+         </children>
+      </HBox>
+      <MaterialDesignIconView fx:id="deleteIcon" fill="#b50303" glyphName="DELETE" layoutX="264.0" layoutY="581.0" onMousePressed="#deleteFund" size="40">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="25.67" offsetX="3.0" offsetY="3.0" radius="11.945" spread="0.23" width="24.11" />
+         </effect>
+      </MaterialDesignIconView>
+   </children>
+</Pane>

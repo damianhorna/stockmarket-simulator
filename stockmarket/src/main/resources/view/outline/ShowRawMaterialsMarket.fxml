@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" styleClass="modal-dialog-glass" stylesheets="@../../styles/modal-dialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.outline.ShowRawMaterialsMarketController">
+   <children>
+      <MaterialDesignIconView fx:id="closePopUpIco" glyphName="POWER" layoutX="962.0" layoutY="35.0" onMouseClicked="#closePopUp" size="24">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <Label fx:id="emName" alignment="CENTER" layoutX="562.0" layoutY="241.0" prefHeight="35.0" prefWidth="402.0" text="Name of market" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="156.0" fitWidth="402.0" layoutX="562.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow offsetX="2.0" offsetY="2.0" spread="0.26" />
+         </effect>
+         <image>
+            <Image url="@../../images/exchangemarket.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="562.0" layoutY="323.0" prefHeight="132.0" prefWidth="128.0">
+         <children>
+            <Label text="Country:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="City:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Address:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Profit margin:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="728.0" layoutY="323.0" prefHeight="132.0" prefWidth="237.0">
+         <children>
+            <Label fx:id="emCountry" text="Country">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="emCity" text="City">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="emAddress" text="Address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="emProfitMargin" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="562.0" layoutY="282.0" prefHeight="10.0" prefWidth="392.0">
+         <children>
+            <Line endX="100.0" startX="-100.0" />
+            <Line endX="100.0" startX="-100.0" />
+         </children>
+      </HBox>
+      <Label layoutX="239.0" layoutY="66.0" text="Actions:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="141.0" text="Add new raw material to the market:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="323.0" text="Remove raw material from the market:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="emAddComboBox" layoutX="193.0" layoutY="186.0" prefHeight="31.0" prefWidth="179.0" promptText="Choose raw material" />
+      <JFXComboBox fx:id="emRemoveComboBox" layoutX="193.0" layoutY="358.0" prefHeight="31.0" prefWidth="179.0" promptText="Choose raw material" />
+      <JFXButton fx:id="emAddButton" buttonType="RAISED" layoutX="259.0" layoutY="228.0" onAction="#addRawMaterial" ripplerFill="#3409f4" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="emRemoveButton" buttonType="RAISED" layoutX="246.0" layoutY="409.0" onAction="#removeRawMaterial" ripplerFill="#320cee" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</Pane>
