@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="404.0" style="-fx-background-color: #ffffff;" styleClass="modal-dialog-glass" stylesheets="@../../styles/modal-dialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.add.AddCompanyPopUpController">
+   <children>
+      <JFXButton fx:id="addIco" buttonType="RAISED" layoutX="168.0" layoutY="343.0" onAction="#addCompany" ripplerFill="#33ffff" style="-fx-background-color: #182942; -fx-background-radius: 30px;" text="ADD" textFill="#f8f1f1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="73.0" layoutY="75.0" prefHeight="154.0" prefWidth="258.0" style="-fx-alignment: TOP_LEFT;" stylesheets="@../../styles/modal-dialog.css">
+         <children>
+            <JFXTextField fx:id="name" labelFloat="true" promptText="Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="sectorComboBox" labelFloat="true" prefHeight="31.0" prefWidth="296.0" promptText="Economic Sector" style="-fx-font-size: 15pt; -fx-alignment: center;" stylesheets="@../../styles/modal-dialog.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+         </children>
+      </VBox>
+      <MaterialDesignIconView fx:id="closePopUpIco" glyphName="POWER" layoutX="355.0" layoutY="43.0" onMouseClicked="#closePopUp" size="24">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <StackPane fx:id="stackPane" layoutX="94.0" layoutY="208.0" prefHeight="84.0" prefWidth="200.0" />
+   </children>
+</Pane>

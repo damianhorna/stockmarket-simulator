@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.chart.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" styleClass="modal-dialog-glass" stylesheets="@../../styles/modal-dialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.outline.ShowShareController">
+   <children>
+      <MaterialDesignIconView fx:id="closePopUpIco" glyphName="POWER" layoutX="962.0" layoutY="35.0" onMouseClicked="#closePopUp" size="24">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <Label fx:id="companyName" alignment="CENTER" layoutX="562.0" layoutY="241.0" prefHeight="35.0" prefWidth="402.0" text="Name of company" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="156.0" fitWidth="402.0" layoutX="562.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow offsetX="2.0" offsetY="2.0" spread="0.26" />
+         </effect>
+         <image>
+            <Image url="@../../images/company.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="562.0" layoutY="296.0" prefHeight="230.0" prefWidth="267.0">
+         <children>
+            <Label text="Number of shares:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Current rate:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Initial rate:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Maximal rate:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Minimal rate:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Volume:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="861.0" layoutY="296.0" prefHeight="230.0" prefWidth="101.0">
+         <children>
+            <Label fx:id="shareNumOfShares" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="shareCurrentRate" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="shareInitialRate" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="shareMaximalRate" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="shareMinimalRate" prefHeight="21.0" prefWidth="119.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="shareVolume" prefHeight="21.0" prefWidth="119.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <StackPane fx:id="stackPane" layoutX="133.0" layoutY="344.0" prefHeight="10.0" prefWidth="301.0" />
+      <HBox layoutX="562.0" layoutY="276.0" prefHeight="10.0" prefWidth="392.0">
+         <children>
+            <Line endX="100.0" startX="-100.0" />
+            <Line endX="100.0" startX="-100.0" />
+         </children>
+      </HBox>
+      <LineChart layoutX="14.0" layoutY="51.0" prefHeight="460.0" prefWidth="527.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <VBox layoutX="514.0" layoutY="65.0" prefHeight="388.0" prefWidth="24.0" />
+     <Label fx:id="shareQuoted" layoutX="640.0" layoutY="517.0" text="This asset is not quoted yet!" textFill="#ff0f0f">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="221.0" layoutY="500.0" prefHeight="52.0" prefWidth="168.0">
+         <children>
+           <JFXButton fx:id="refreshButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="14.0" onAction="#refreshChart" ripplerFill="#011fff" style="-fx-background-color: #ffffff; -fx-background-radius: 30px;">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="periodComboBox" labelFloat="true" layoutX="58.0" layoutY="12.0" promptText="Period" />
+         </children>
+      </Pane>
+      
+   </children>
+</Pane>

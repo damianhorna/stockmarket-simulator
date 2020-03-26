@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.MainScreenController">
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+         	<fx:include fx:id="sideMenuScreen" source="SideMenuScreen.fxml" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+     <fx:include fx:id="overview" source="OverviewScreen.fxml" />
+   </center>
+</BorderPane>

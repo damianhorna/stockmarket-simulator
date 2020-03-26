@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.chart.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" styleClass="modal-dialog-glass" stylesheets="@../../styles/modal-dialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.outline.ShowCompanyRatingsController">
+   <children>
+      <MaterialDesignIconView fx:id="closePopUpIco" glyphName="POWER" layoutX="962.0" layoutY="35.0" onMouseClicked="#closePopUp" size="24">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <Label fx:id="ratName" alignment="CENTER" layoutX="562.0" layoutY="56.0" prefHeight="35.0" prefWidth="402.0" text="Name of company" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="574.0" layoutY="163.0" prefHeight="249.0" prefWidth="160.0">
+         <children>
+            <Label text="Open:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="High:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Low:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Last:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Change:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Change(%):">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="All time low:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="All time high:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="763.0" layoutY="163.0" prefHeight="266.0" prefWidth="193.0">
+         <children>
+            <Label fx:id="ratOpen" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="ratHigh" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratLow" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratLast" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratChange" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratChangePct" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratAllTimeLow" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ratAllTimeHigh" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="562.0" layoutY="100.0" prefHeight="10.0" prefWidth="392.0">
+         <children>
+            <Line endX="100.0" startX="-100.0" />
+            <Line endX="100.0" startX="-100.0" />
+         </children>
+      </HBox>
+<!--      <LineChart fx:id="ratChart" layoutX="36.0" layoutY="56.0">
+        <xAxis>
+          <CategoryAxis fx:id="ratDateAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="ratNumberAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>-->
+      <Pane layoutX="213.0" layoutY="476.0" prefHeight="52.0" prefWidth="168.0">
+         <children>
+            <JFXButton fx:id="refreshButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="14.0" onAction="#refreshChart" ripplerFill="#011fff" style="-fx-background-color: #ffffff; -fx-background-radius: 30px;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="periodComboBox" labelFloat="true" layoutX="58.0" layoutY="12.0" promptText="Period" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

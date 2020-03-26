@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.SettingsController">
+	<children>
+      <MaterialDesignIconView fx:id="closeIcon" glyphName="POWER" layoutX="1041.0" layoutY="42.0" onMousePressed="#closeApp" size="30" wrappingWidth="25.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></MaterialDesignIconView>
+      <Pane layoutX="32.0" layoutY="110.0" prefHeight="405.0" prefWidth="813.0">
+         <children>
+      		<Label layoutX="44.0" layoutY="14.0" prefHeight="35.0" prefWidth="241.0" text="%settings.language" textFill="#335686">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" layoutX="44.0" layoutY="67.0" prefHeight="27.0" prefWidth="641.0" text="%settings.language.choose" textFill="#335686">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="autoAddingButton" alignment="TOP_LEFT" layoutX="742.0" layoutY="253.0" onAction="#enableAutoAdding" prefHeight="44.0" prefWidth="68.0" size="8.0" text=" " toggleColor="#1c3e8d" />
+            <JFXComboBox fx:id="langComboBox" focusColor="#009688" layoutX="748.0" layoutY="65.0" promptText="..." unFocusColor="BLACK" />
+            <Label layoutX="47.0" layoutY="203.0" text="%settings.auto-adding" textFill="#335686">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="259.0" prefHeight="37.0" prefWidth="641.0" text="%settings.auto-adding.choose" textFill="#335686">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="469.0" layoutY="15.0" text="%settings" textFill="#0059a1">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>

@@ -1,0 +1,8 @@
+stockmarket.application
+stockmarket.controller
+stockmarket.controller.add
+stockmarket.controller.manager
+stockmarket.controller.outline
+stockmarket.model
+stockmarket.simulation
+stockmarket.utils

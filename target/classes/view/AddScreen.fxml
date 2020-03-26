@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" stylesheets="@../styles/add-style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmarket.controller.AddController">
+	<children>
+      <MaterialDesignIconView fx:id="closeIcon" glyphName="POWER" layoutX="1041.0" layoutY="59.0" onMousePressed="#closeApp" size="30" wrappingWidth="25.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></MaterialDesignIconView>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="86.0" layoutY="119.0" onAction="#addInvestor" prefHeight="170.0" prefWidth="160.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.investor" textFill="#182942">
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="USER" size="50" />
+         </graphic>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="257.0" layoutY="119.0" onAction="#addInvestmentFund" prefHeight="170.0" prefWidth="331.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.investment.fund" textFill="#182942">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="USERS" size="50" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="602.0" layoutY="119.0" onAction="#addCompany" prefHeight="170.0" prefWidth="171.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.company" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="COGS" size="50" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="788.0" layoutY="119.0" onAction="#addCurrency" prefHeight="170.0" prefWidth="160.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.currency" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="USD" size="50" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="86.0" layoutY="305.0" onAction="#addExchangeMarket" prefHeight="170.0" prefWidth="250.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.exchange.market" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="MONEY" size="50" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="529.0" layoutY="487.0" onAction="#addRawMaterialsMarket" prefHeight="170.0" prefWidth="421.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.raw.materials.market" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="CUBES" size="50" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="349.0" layoutY="305.0" onAction="#addStockExchange" prefHeight="170.0" prefWidth="348.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.stock.exchange" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="LINE_CHART" size="50" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="713.0" layoutY="305.0" onAction="#addRawMaterial" prefHeight="170.0" prefWidth="237.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.raw.material" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="CUBE" size="50" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="86.0" layoutY="487.0" onAction="#addExchangeIndex" prefHeight="170.0" prefWidth="428.0" ripplerFill="#003f51" style="-fx-background-color: #ffffff;" text="%add.stock.exchange.index" textFill="#182942">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#182942" glyphName="LIST_ALT" size="50" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="504.0" layoutY="15.0" text="%add" textFill="#0059a1">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>
